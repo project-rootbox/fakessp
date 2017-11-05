@@ -42,6 +42,9 @@ CHECK_ALIAS(int, vsnprintf,
             (char* str, size_t len, int flags, size_t strlen,
              const char* format, va_list va),
             (str, len, format, va))
+CHECK_ALIAS(int, vfprintf,
+            (FILE* fp, int flags, const char* format, va_list va),
+            (fp, format, va))
 
 UNDERSCORE_ALIAS(int, isinf, (double value), (value))
 UNDERSCORE_ALIAS(int, isnan, (double value), (value))
